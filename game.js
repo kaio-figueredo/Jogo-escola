@@ -55,17 +55,18 @@ window.onload = function() {
     }
 
     function drawSchool(x, y) {
-        ctx.fillStyle = "#71B924";
-        ctx.fillRect(x, y, tileSize, tileSize);
-        ctx.fillStyle = "#2c3e50"; // Prédio principal
-        ctx.fillRect(x + 2, y + 5, 36, 30);
-        ctx.fillStyle = "white";
+
+        drawGrass(x, y);
+        ctx.fillStyle = "#d08c2eff"; // Parede
+        ctx.fillRect(x + 5, y + 15, 30, 20);
+        ctx.fillStyle = "#5d1a1a"; // Telhado
+        ctx.beginPath();
+        ctx.moveTo(x + 5, y + 15);
+        ctx.lineTo(x + 20, y + 5);
+        ctx.lineTo(x + 35, y + 15);
+        ctx.fill();
         ctx.font = "bold 10px Arial";
         ctx.fillText(" Fim.", x + 8, y + 25);
-        // ctx.fillStyle = "yellow"; // Relógio/Símbolo
-        // ctx.beginPath();
-        // ctx.arc(x + 20, y + 10, 3, 0, Math.PI*2);
-        // ctx.fill();
     }
 
     function drawChild(x, y) {
