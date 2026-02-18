@@ -23,7 +23,6 @@ window.onload = function() {
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
     ];
 
-    // FUNÇÕES DE DESENHO "NA MÃO"
     function drawGrass(x, y) {
         ctx.fillStyle = "#71B924";
         ctx.fillRect(x, y, tileSize, tileSize);
@@ -42,24 +41,24 @@ window.onload = function() {
 
     function drawHouse(x, y) {
         drawGrass(x, y);
-        ctx.fillStyle = "#a52a2a"; // Parede
+        ctx.fillStyle = "#a52a2a"; 
         ctx.fillRect(x + 5, y + 15, 30, 20);
-        ctx.fillStyle = "#5d1a1a"; // Telhado
+        ctx.fillStyle = "#5d1a1a"; 
         ctx.beginPath();
         ctx.moveTo(x + 5, y + 15);
         ctx.lineTo(x + 20, y + 5);
         ctx.lineTo(x + 35, y + 15);
         ctx.fill();
-        ctx.fillStyle = "#fff"; // Janela
+        ctx.fillStyle = "#fff";
         ctx.fillRect(x + 10, y + 20, 8, 8);
     }
 
     function drawSchool(x, y) {
 
         drawGrass(x, y);
-        ctx.fillStyle = "#d08c2eff"; // Parede
+        ctx.fillStyle = "#d08c2eff"; 
         ctx.fillRect(x + 5, y + 15, 30, 20);
-        ctx.fillStyle = "#5d1a1a"; // Telhado
+        ctx.fillStyle = "#5d1a1a"; 
         ctx.beginPath();
         ctx.moveTo(x + 5, y + 15);
         ctx.lineTo(x + 20, y + 5);
@@ -71,14 +70,14 @@ window.onload = function() {
 
     function drawChild(x, y) {
         drawRoad(x, y);
-        ctx.fillStyle = "#e74c3c"; // Mochila
+        ctx.fillStyle = "#e74c3c"; 
         ctx.fillRect(x + 12, y + 12, 16, 16);
         ctx.fillStyle = "white";
-        ctx.fillRect(x + 16, y + 15, 8, 2); // Alça da mochila
+        ctx.fillRect(x + 16, y + 15, 8, 2); 
     }
 
     function drawVan(x, y) {
-        // Corpo da Van
+        
         ctx.fillStyle = "#f1c40f";
         ctx.roundRect(x + 4, y + 8, 32, 24, 5);
         ctx.fill();
