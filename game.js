@@ -153,7 +153,6 @@ window.onload = function() {
     render();
 };
 
-// Polyfill para navegadores antigos que não tem roundRect
 if (!CanvasRenderingContext2D.prototype.roundRect) {
     CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
         if (w < 2 * r) r = w / 2;
